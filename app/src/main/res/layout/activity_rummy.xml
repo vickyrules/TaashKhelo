@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".Rummy">
+
+    <ImageView
+        android:id="@+id/dahboard_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.18"
+        android:cropToPadding="true"
+        android:paddingRight="72sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+          />
+
+    <LinearLayout
+        android:id="@+id/start_menu"
+        android:layout_width="340dp"
+        android:layout_height="540dp"
+        android:background="@drawable/divider"
+        android:gravity="center"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425"
+        app:srcCompat="@drawable/background_dash">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:background="@drawable/divider"
+            android:divider="@drawable/divider"
+            android:orientation="horizontal"
+            android:showDividers="end">
+
+
+            <Button
+
+                android:id="@+id/num_player_02"
+                android:layout_width="60dp"
+                android:alpha="0.8"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/divider"
+                android:padding="12dp"
+                android:scaleType="fitXY"
+                android:text="2P"
+                android:textColor="@color/purple_500"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                 />
+
+            <Button
+                android:id="@+id/num_player_03"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:alpha="0.8"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/divider"
+                android:scaleType="fitXY"
+                android:text="3P"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                 />
+
+            <Button
+                android:id="@+id/num_player_04"
+                android:alpha="0.8"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/divider"
+                android:scaleType="fitXY"
+                android:text="4P"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                 />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/score_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
+                android:background="@drawable/divider">
+
+                <TextView
+                    android:id="@+id/score_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/divider"
+                    android:editable="false"
+                    android:ems="10"
+
+                    android:gravity="center"
+                    android:inputType="none"
+                    android:text="Points limit: "
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/score_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="100"
+                    android:background="@drawable/divider"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:textColorHint="#99FFFFFF"
+                    android:hint="Enter Points limit"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                     android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/divider"
+            android:divider="@color/black"
+            android:dividerPadding="5dp"
+            android:measureWithLargestChild="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/player_01_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/divider"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/player_01_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/avataat3"
+
+                    />
+
+                <EditText
+                    android:id="@+id/player_01_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:hint="Player 01"
+                    android:layout_margin="20dp"
+                    android:textSize="25dp"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:textColorHint="#8AAAD3"
+                    android:textColor="@color/black"
+                    android:gravity="start|top" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/player_02_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/divider"
+                android:orientation="horizontal"
+
+                android:layout_marginTop="3dp">
+
+                <ImageView
+                    android:id="@+id/player_02_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/avataat3"
+
+                    />
+
+                <EditText
+                    android:id="@+id/player_02_text"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:inputType="textPersonName"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:textColorHint="#8AAAD3"
+                    android:textSize="25dp"
+                    android:hint="Player 02"
+                    android:gravity="start|top" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/player_03_layout"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:background="@drawable/divider"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp">
+
+                <ImageView
+                    android:id="@+id/player_03_img"
+                    android:layout_width="40dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="13dp"
+                    android:scaleType="fitXY"
+                    android:textColorHint="#8AAAD3"
+                    app:srcCompat="@drawable/avataat3"
+
+                    />
+
+                <EditText
+                    android:textSize="25dp"
+                    android:hint="Player 03"
+                    android:id="@+id/player_03_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:inputType="textPersonName"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:textColorHint="#8AAAD3"
+                    android:textColor="@color/black"
+                    android:gravity="start|top" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/player_04_layout"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:background="@drawable/divider"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp">
+
+                <ImageView
+                    android:id="@+id/player_04_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/avataat3"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/player_04_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:textSize="25dp"
+                    android:textColorHint="#8AAAD3"
+                    android:hint="Player 04"
+                    android:inputType="textPersonName"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/black"
+                    android:gravity="start|top" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"
+        android:layout_weight="1"
+
+        android:padding="12dp"
+        android:scaleType="fitXY"
+        android:text="start"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        android:backgroundTint="@color/cute_blue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/dahboard_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_menu"
+        app:layout_constraintVertical_bias="0.38"
+         />
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

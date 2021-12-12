@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".GusshDashboard">
+
+    <ImageView
+        android:id="@+id/rummy_dahboard_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.18"
+        android:cropToPadding="true"
+        android:paddingRight="72sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_dash"
+        />
+
+    <TextView
+        android:id="@+id/score_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Rounds Limit: "
+        android:textColor="@color/white"
+
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/start_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rummy_dahboard_background" />
+
+    <LinearLayout
+
+        android:id="@+id/start_menu"
+
+        android:layout_width="match_parent"
+        android:layout_height="581dp"
+        android:background="@drawable/onclick_divider"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425"
+        app:srcCompat="@drawable/background_dash">
+
+
+
+        <TextView
+            android:id="@+id/current_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Current round: "
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
+            <!--player1 -->
+
+            <LinearLayout
+                android:background="@drawable/divider"
+                android:layout_marginLeft="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:id="@+id/player_01_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vikas"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/player_01_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:editable="false"
+                    android:inputType="none"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/onclick_divider"
+                    android:textSize="45dp"
+                    />
+
+                <EditText
+                    android:id="@+id/player_01_score_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:hint="Enter points"
+                    android:inputType="numberDecimal"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/plus_btn_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="+"
+                        android:backgroundTint="@color/cute_blue"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"/>
+
+                    <Button
+                        android:id="@+id/minus_btn_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:backgroundTint="@color/cute_blue"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:layout_margin="5dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--player2-->
+
+            <LinearLayout
+                android:background="@drawable/divider"
+                android:layout_marginRight="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:id="@+id/player_02_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vikas"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/player_02_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:editable="false"
+                    android:inputType="none"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/onclick_divider"
+                    android:textSize="45dp" />
+
+                <EditText
+                    android:id="@+id/player_02_score_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter points"
+                    android:inputType="numberDecimal"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/plus_btn_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:backgroundTint="@color/cute_blue"
+                        android:layout_margin="5dp" />
+
+                    <Button
+                        android:backgroundTint="@color/cute_blue"
+                        android:id="@+id/minus_btn_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:layout_margin="5dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--player3-4 -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1">
+
+            <!--player3-->
+
+            <LinearLayout
+                android:background="@drawable/divider"
+                android:layout_marginLeft="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:id="@+id/player_03_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vikas"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/player_03_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:editable="false"
+                    android:inputType="none"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/onclick_divider"
+                    android:textSize="45dp" />
+
+                <EditText
+                    android:id="@+id/player_03_score_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter points"
+                    android:inputType="numberDecimal"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"  />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/plus_btn_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:backgroundTint="@color/cute_blue"
+                        android:layout_margin="5dp" />
+
+                    <Button
+                        android:id="@+id/minus_btn_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:backgroundTint="@color/cute_blue"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:layout_margin="5dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--player4-->
+
+            <LinearLayout
+                android:background="@drawable/divider"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:id="@+id/player_04_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vikas"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/player_04_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:editable="false"
+                    android:inputType="none"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/onclick_divider"
+                    android:textSize="45dp" />
+
+                <EditText
+                    android:id="@+id/player_04_score_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:inputType="numberDecimal"
+                    android:editable="true"
+                    android:hint="Enter points"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/plus_btn_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="+"
+                        android:backgroundTint="@color/cute_blue"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:layout_margin="5dp" />
+
+                    <Button
+                        android:id="@+id/minus_btn_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:backgroundTint="@color/cute_blue"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:layout_margin="5dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/winner_label"
+        android:layout_width="319dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:background="#3E3939"
+        android:gravity="center_horizontal"
+        android:textColor="#45B6B3"
+        android:textSize="30dp"
+        android:visibility="gone"
+        android:layout_marginTop="-33dp"
+        android:foregroundGravity="top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/instruction_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#B33E3939">
+
+
+
+        <TextView
+            android:id="@+id/instruction_title"
+            android:layout_width="313dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:editable="false"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/antic_slab"
+            android:inputType="none"
+            android:text="Instructions"
+            android:textColor="@color/white"
+            android:textSize="23dp"
+            />
+
+        <TextView
+            android:id="@+id/instructions_list"
+            android:layout_width="313dp"
+            android:layout_height="410dp"
+            android:layout_below="@id/instruction_title"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:editable="false"
+            android:layout_marginTop="8dp"
+            android:text="1. At first enter the points of player_01. \n\n2.At last enter the points of the last player i.e (Player_04) .\n\n3. The player with the highest  points will win the game. \n\n4.
+The player with the lowest points  will lose the game. "
+            android:inputType="none"
+            android:textColor="@color/white"
+            android:textSize="23dp"
+            android:layout_marginBottom="15dp"
+            />
+
+
+        <TextView
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:gravity="center"
+            android:background="#A8CEFF"
+            android:id="@+id/lang_btn"
+            android:layout_marginLeft="2dp"
+            android:layout_alignTop="@id/instruction_title"
+            android:layout_alignLeft="@id/instruction_title"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" X "
+            android:id="@+id/close_btn"
+            android:layout_alignTop="@id/instruction_title"
+            android:layout_alignRight="@id/instruction_title"
+            android:textColor="@color/app_icon_backdround"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

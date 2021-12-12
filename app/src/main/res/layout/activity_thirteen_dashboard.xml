@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".ThirteenDashboard">
+
+    <ImageView
+        android:id="@+id/rummy_dahboard_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.18"
+        android:cropToPadding="true"
+        android:paddingRight="72sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_dash"
+        />
+
+    <TextView
+        android:id="@+id/score_label"
+        android:layout_width="142dp"
+        android:layout_height="21dp"
+        android:layout_gravity="top"
+        android:gravity="center"
+
+        android:text="Game Ends at: 52 "
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/start_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rummy_dahboard_background" />
+
+    <LinearLayout
+
+        android:id="@+id/start_menu"
+        android:layout_width="match_parent"
+        android:layout_height="621dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/thirteen_divider"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42"
+        app:srcCompat="@drawable/background_dash">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+              android:background="@drawable/red_divider"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bangers"
+                android:layout_gravity="center"
+                android:textSize="25dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textColor="@color/app_icon_backdround"
+                android:text="TEAM-A"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="@drawable/blue_divider"/>
+
+            <TextView
+                android:id="@+id/p1_p3_names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vikas"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/score_A"
+                android:layout_margin="20dp"
+                android:textSize="90dp"
+                android:background="@drawable/blue_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+
+
+            <EditText
+                android:id="@+id/p1_p3_bid_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Your Target"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp">
+
+                <Button
+                    android:id="@+id/team_A_success"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#06980C"
+                    android:padding="5dp"
+                    android:text="success"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+                <Button
+                    android:id="@+id/team_A_failed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/app_icon_backdround"
+                    android:text="failed"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/blue_divider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bangers"
+                android:layout_gravity="center"
+                android:textSize="25dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textColor="@color/light_blue_900"
+                android:text="TEAM-B "
+                android:paddingLeft="15dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/red_divider"/>
+
+            <TextView
+                android:id="@+id/p2_p4_names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vikas"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/score_B"
+                android:layout_margin="20dp"
+                android:textSize="90dp"
+                android:background="@drawable/red_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/p2_p4_bid_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                 android:hint="Your Target"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp">
+
+                <Button
+                    android:id="@+id/team_B_success"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#06980C"
+                    android:padding="5dp"
+                    android:text="success"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+                <Button
+                    android:id="@+id/team_B_failed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/app_icon_backdround"
+                    android:text="failed"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/winner_label"
+        android:layout_width="340dp"
+        android:layout_height="379dp"
+        android:alpha="0.9"
+        android:background="#3E3939"
+        android:gravity="center"
+        android:foregroundGravity="center"
+        android:visibility="gone"
+        android:textColor="#45B6B3"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/start_menu"
+        app:layout_constraintEnd_toEndOf="@+id/start_menu"
+        app:layout_constraintStart_toStartOf="@+id/start_menu"
+        app:layout_constraintTop_toTopOf="@+id/start_menu" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

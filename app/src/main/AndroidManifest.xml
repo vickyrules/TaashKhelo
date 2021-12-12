@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.TaashKheloApp">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+
+
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TaashKhelo">
+
+        <activity
+            android:name="com.example.TaashKheloApp.Settings"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.TaashKheloApp.about"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <!-- Include the host attribute if you want your app to respond
+                     only to URLs with your app's domain. -->
+                <data android:scheme="http" android:host="www.example.com" />
+                <!-- The BROWSABLE category is required to get links from web pages. -->
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <data android:scheme="mailto" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.TaashKheloApp.ThirteenDashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.TaashKheloApp.GusshDashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.TaashKheloApp.RummyDashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.TaashKheloApp.Gussh"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.TaashKheloApp.Thirteen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.TaashKheloApp.Rummy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.TaashKheloApp.Splash_Screen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TaashKhelo.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.TaashKheloApp.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TaashKhelo.Fullscreen" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:theme="@style/ThemeOverlay.TaashKhelo.FullscreenContainer"
+    tools:context=".FullscreenActivity">
+
+
+    <ImageView
+        android:id="@+id/dahboard_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:alpha="0.18"
+        android:foregroundGravity="center"
+        android:cropToPadding="true"
+        android:paddingRight="72sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:srcCompat="@drawable/background_dash" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:elevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:contextClickable="true"
+            android:clickable="true"
+            android:text="DashBoard"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:background="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <com.example.TaashKheloApp.MySpinner
+            android:id="@+id/spinner"
+
+            android:layout_width="221dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="6"
+            android:background="@drawable/setting_icon"
+            android:longClickable="true"
+            android:rotation="-90"
+            android:rotationX="0"
+            android:scaleType="fitCenter"
+
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="38dp"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="68dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+
+            >
+
+            <ImageView
+
+                android:id="@+id/gussh_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+
+                android:contextClickable="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/gussi_icon"
+
+               />
+
+
+            <TextView
+
+                android:id="@+id/gussh_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:fontFamily="@font/bangers"
+                android:gravity="center_horizontal"
+                android:text="Ghochi"
+                android:textAlignment="center"
+                android:textSize="42dp"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:textColor="#FFB300"
+                android:layout_marginTop="-50dp"/>
+
+            <ImageView
+                android:id="@+id/rummy_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/rummy_icon"
+               />
+
+            <TextView
+                android:id="@+id/rummy_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rummy"
+
+                android:textSize="42dp"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:textColor="#FFB300"
+                android:fontFamily="@font/bangers"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_weight="0"
+
+                android:layout_marginTop="-50dp"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/thirteen_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:clickable="true"
+                android:contextClickable="true"
+                app:srcCompat="@drawable/teeri_icon" />
+
+            <TextView
+                android:id="@+id/thirteen_text"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="13 teen"
+                android:clickable="true"
+                android:layout_marginTop="-50dp"
+                android:textSize="42dp"
+                android:fontFamily="@font/bangers"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_gravity=""
+                android:contextClickable="true"
+                android:textColor="#FFB300"
+                />
+
+
+            <ImageView
+                android:id="@+id/coming_soon_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/coming_soon_icon"
+                android:clickable="true"
+                android:contextClickable="true"
+                />
+
+            <TextView
+                android:id="@+id/coming_soon"
+                android:layout_marginTop="-50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:text=". . . . ."
+                android:fontFamily="@font/bangers"
+                android:textAlignment="center"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:textColor="#FFB300"
+                android:textSize="42dp"
+               />
+
+        </LinearLayout>
+
+
+    </LinearLayout><![CDATA[
+
+    \/>
+
+]]>
+</androidx.constraintlayout.widget.ConstraintLayout>
